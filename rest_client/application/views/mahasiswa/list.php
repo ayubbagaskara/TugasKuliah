@@ -2,6 +2,7 @@
 <table>
     <tr><th>NIM</th><th>NAMA</th><th>ID JURUSAN</th><th>ALAMAT</th><th></th></tr>
     <?php
+	if (is_array($krs)){
     foreach ($mahasiswa as $m){
         echo "<tr>
               <td>$m->nim</td>
@@ -12,7 +13,7 @@
                   ".anchor('mahasiswa/delete/'.$m->nim,'Delete')."</td>
               </tr>";
     }
-    
+	}
     ?>
     <a href="mahasiswa/create">Create</a>
 </table>
