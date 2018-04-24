@@ -2,6 +2,7 @@
 <table>
     <tr><th>kode_mk</th><th>nama_mk</th><th>ID JURUSAN</th><th>ALAMAT</th><th></th></tr>
     <?php
+	if (is_array($mata_kuliah)){
     foreach ($mata_kuliah as $m){
         echo "<tr>
               <td>$m->kode_mk</td>
@@ -11,7 +12,7 @@
                   ".anchor('mata_kuliah/delete/'.$m->kode_mk,'Delete')."</td>
               </tr>";
     }
-    
+	}
     ?>
     <a href="mata_kuliah/create">Create</a>
 </table>
